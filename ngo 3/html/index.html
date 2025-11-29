@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Website</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Banner / Home Section -->
+    <div class="fullContainer banner" id="homesection">
+      <header>
+        <div class="container">
+          <div class="logo">
+            <img src="../images/logo white.png" alt="Logo here" />
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#homesection">Home</a></li>
+              <li><a href="#aboutSection">Donation</a></li>
+              <li><a href="#programSection">Programs</a></li>
+              <li><a href="#educationSection">Education</a></li>
+              <li><a href="#gallerySection">Gallery</a></li>
+              <li><a href="#contactSection">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="container">
+        <h1>Together We Can <span>Save Lives</span></h1>
+        <p>
+          Welcome to our NGO, dedicated to supporting underprivileged
+          communities through education, health, and empowerment programs.
+        </p>
+        <button>Start With A Little</button>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="fullcontainer" id="aboutSection">
+      <div class="container">
+        <h2 class="sectionTitle">Donation</h2>
+        <p>
+          We are a non-profit organization dedicated to supporting
+          underprivileged communities through education, healthcare, and social
+          development programs.
+        </p>
+        <div class="cards">
+          <div class="donationBox">
+            <div class="title">Give Donation</div>
+            <p>Your generosity today can transform lives tomorrow—every contribution counts.</p>
+            <button>Donate Now</button>
+          </div>
+          <div class="volunteerBox">
+            <div class="title">Become a Volunteer</div>
+            <p>Be the change you want to see—lend your hands, heart, and time to make a difference.</p>
+            <button>Join Now</button>
+          </div>
+          <div class="scholarshipBox">
+            <div class="title">Give Scholarship</div>
+            <p>Empower a child’s future today,your donation can light the path to education.</p>
+            <button>Give Immediately</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Programs Section -->
+<section class="programs" id="programSection">
+  <div class="container">
+    <h2 class="sectionTitle">Programs</h2>
+    <div class="boxContainr">
+      
+      <!-- Program 1 -->
+      <div class="box">
+        <div class="cardImage">
+          <img src="../images/gallery image 7.jpeg" alt="Education Program" />
+          <div class="programTitle">Education To Every Child</div>
+          <div class="donationCount">Donation Goal: <span>$9845</span></div>
+     
+        </div>
+      </div>
+
+      <!-- Program 2 -->
+      <div class="box">
+        <div class="cardImage">
+          <img src="../images/gallery image 9.jpeg" alt="Clean Water Program" />
+          <div class="programTitle">Clean Water For People</div>
+          <div class="donationCount">Donation Goal: <span>$9845</span></div>
+          
+        </div>
+      </div>
+
+      <!-- Program 3 -->
+      <div class="box">
+        <div class="cardImage">
+          <img src="../images/gallery image 6.jpeg" alt="Healthcare Program" />
+          <div class="programTitle">Healthcare Support</div>
+          <div class="donationCount">Donation Goal: <span>$7500</span></div>
+        
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Education Section -->
+    <section class="education" id="educationSection">
+      <div class="container">
+        <h2 class="sectionTitle">Education</h2>
+        <p>
+          Our NGO believes education is the foundation of empowerment. We provide
+          free learning resources, workshops, and mentorship programs.
+        </p>
+        <div class="eduCards">
+          <div class="eduBox">
+            <div class="title">Primary Education</div>
+            <p>Basic literacy and numeracy for children aged 5–12.</p>
+            <button>Support Now</button>
+          </div>
+          <div class="eduBox">
+            <div class="title">Adult Literacy</div>
+            <p>Helping adults learn to read, write, and gain confidence.</p>
+            <button>Join Program</button>
+          </div>
+          <div class="eduBox">
+            <div class="title">Skill Development</div>
+            <p>Vocational training to prepare youth for employment.</p>
+            <button>Enroll Today</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallerySection">
+      <div class="container">
+        <h2 class="sectionTitle">Gallery</h2>
+        <div class="galleryGrid">
+          <img src="../images/gallery image 1.jpg" alt="Gallery Image 1" />
+          <img src="../images/gallery image 2.jpg" alt="Gallery Image 2" />
+          <img src="../images/gallery image 3.jpg" alt="Gallery Image 3" />
+          <img src="../images/gallery image 4.jpg" alt="Gallery Image 4" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contactSection">
+      <div class="container">
+        <h2 class="sectionTitle">Contact Us</h2>
+        <form class="contactForm">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 NGO Website | All Rights Reserved</p>
+      </div>
+    </footer>
+<!-- Modal Form -->
+<div id="donationModal" class="modal">
+  <div class="modal-content">
+    <span class="closeBtn">&times;</span>
+    <h2>Fill Out The Form</h2>
+    <form id="ngoForm" action="#" method="POST">
+      <input type="hidden" id="type" name="type" value=""> <!-- Hidden input -->
+
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required placeholder="Your Name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Your Email">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required placeholder="Your Contact Number">
+
+      <label for="amount">Amount (if applicable)</label>
+      <input type="number" id="amount" name="amount" placeholder="Enter Amount">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+  </body>
+  <script>
+  const modal = document.getElementById('donationModal');
+  const openButtons = document.querySelectorAll(
+    '.donationBox button, .volunteerBox button, .scholarshipBox button, #programSection button, .eduBox button'
+  );
+  const closeBtn = document.querySelector('.closeBtn');
+  const typeInput = document.getElementById('type');
+
+  // Open modal on button click
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modal.style.display = 'block';
+
+      // Automatically set hidden input based on button clicked
+      if(btn.parentElement.classList.contains('donationBox') || btn.textContent.includes('Donate')){
+        typeInput.value = 'Donate';
+      } else if(btn.parentElement.classList.contains('volunteerBox') || btn.textContent.includes('Join')){
+        typeInput.value = 'Volunteer';
+      } else if(btn.parentElement.classList.contains('scholarshipBox') || btn.textContent.includes('Give')){
+        typeInput.value = 'Scholarship';
+      }
+    });
+  });
+
+  // Close modal
+  closeBtn.addEventListener('click', () => modal.style.display = 'none');
+
+  // Close modal when clicking outside content
+  window.addEventListener('click', e => {
+    if(e.target == modal) modal.style.display = 'none';
+  });
+</script>
+
+
+</html>

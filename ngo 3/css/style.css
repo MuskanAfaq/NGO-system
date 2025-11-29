@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --themeRed: #ec0e21;
+  --grey: #efefef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 1rem; /* Changed to 1rem (16px) for better readability and scalability */
+  line-height: 1.625rem; /* Adjusted to match new font-size proportionally */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fullContainer {
+  width: 100%;
+}
+
+.container {
+  width: 1140px;
+  margin: auto;
+}
+
+.sectionTitle {
+  width: 300px;
+  border-bottom: 3px solid var(--themeRed);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 0 auto 50px;
+  position: relative;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.sectionTitle::after {
+  display: inline-block;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: var(--themeRed);
+  position: absolute;
+  left: calc(50% - 10px);
+  top: calc(75% - 7px);
+  transform: rotate(45deg) translate(50%, 50%);
+  border: 3px solid #fff;
+}
+
+section {
+  padding: 100px 0;
+  position: relative;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 2;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container .logo {
+  padding: 15px; /* Added 'px' unit */
+  height: 75px;
+}
+
+header .container .logo img {
+  height: 60px;
+  width: auto;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  display: inline-block;
+  height: 75px;
+  line-height: 75px;
+  padding: 0 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1rem; /* Changed to 1rem (16px) for consistency */
+  color: #fff;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: var(--themeRed);
+}
+
+/* Banner */
+.banner {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner h1 {
+  margin-top: 230px;
+  display: inline-block;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  width: 50%;
+  line-height: 4.2rem;
+  font-weight: 100;
+}
+
+.banner h1 span {
+  background-color: var(--themeRed);
+  display: inline-block;
+  line-height: 3.5rem;
+  padding: 0 15px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.banner p {
+  color: #fff;
+  width: 50%;
+  text-shadow: 0 0 2px #000;
+  margin-top: 10px;
+  font-size: 1.125rem; /* Increased to 1.125rem (18px) for better readability in banner */
+}
+
+.banner button {
+  background-color: var(--themeRed);
+  border: 0;
+  outline: none;
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-size: 1rem; /* Increased to 1rem (16px) for better button readability */
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* About Section */
+#aboutSection .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  position: relative;
+  height: 245px;
+}
+
+#aboutSection .cards > div {
+  width: 350px;
+  background-color: var(--grey);
+  padding: 35px;
+  color: #444;
+  text-align: center;
+  border-radius: 15px;
+  height: 215px;
+  border: 1px solid #ccc;
+}
+
+#aboutSection .cards > div:hover {
+  width: 400px;
+  margin-top: -20px;
+  border-color: var(--themeRed);
+  padding: 55px;
+  height: auto;
+  transition: 0.4s;
+}
+
+#aboutSection .cards > div .title {
+  font-size: 1.125rem; /* Changed to 1.125rem (18px) for consistency */
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#aboutSection .cards > div p {
+  font-size: 1rem; /* Changed to 1rem (16px) for consistency */
+  margin-top: 15px;
+}
+
+#aboutSection .cards > div button {
+  border: 1px solid var(--themeRed);
+  outline: none;
+  padding: 7px 15px;
+  margin-top: 15px;
+  font-size: 0.875rem; /* Increased to 0.875rem (14px) for better readability */
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#aboutSection .cards > div:hover button {
+  background-color: var(--themeRed);
+  color: #fff;
+}
+
+/* Programs Section */
+#programSection {
+  background-color: var(--grey);
+}
+
+#programSection .boxContainr { /* Note: Consider renaming to 'boxContainer' for clarity, but left as-is */
+  display: flex;
+  justify-content: space-between;
+}
+
+#programSection .box {
+  width: 48%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#programSection .programTitle {
+  font-size: 1.125rem; /* Changed to 1.125rem (18px) for consistency */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#programSection .donationCount {
+  margin: 10px 0;
+}
+
+#programSection .cardImage img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Crop nicely without distortion */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#programSection button {
+  border: 1px solid var(--themeRed);
+  padding: 7px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.875rem; /* Added font-size for consistency */
+}
+
+#programSection button:hover {
+  background-color: var(--themeRed);
+  color: #fff;
+}
+
+/* Education Section */
+.education {
+  background-color: #fff;
+}
+
+.education .eduCards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.education .eduBox {
+  width: 350px;
+  background-color: var(--grey);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.education .eduBox:hover {
+  border-color: var(--themeRed);
+  transform: translateY(-10px);
+}
+
+.education .eduBox .title {
+  font-size: 1.125rem; /* Changed to 1.125rem (18px) for consistency */
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.education .eduBox button {
+  border: 1px solid var(--themeRed);
+  padding: 7px 15px;
+  margin-top: 15px;
+  font-size: 0.875rem; /* Increased to 0.875rem (14px) for better readability */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.education .eduBox:hover button {
+  background-color: var(--themeRed);
+  color: #fff;
+}
+
+/* Gallery Section */
+.gallery {
+  background-color: var(--grey);
+}
+
+.gallery .galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.gallery .galleryGrid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  transition: 0.3s;
+}
+
+.gallery .galleryGrid img:hover {
+  transform: scale(1.05);
+  border-color: var(--themeRed);
+}
+
+/* Contact Section */
+.contact {
+  background-color: #fff;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: auto;
+}
+
+.contactForm input,
+.contactForm textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem; /* Added font-size for consistency */
+}
+
+.contactForm button {
+  background-color: var(--themeRed);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* Added font-size for consistency */
+}
+
+.contactForm button:hover {
+  background-color: #b50a18;
+}
+
+/* Footer */
+footer {
+  background-color: var(--themeRed);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem; /* Added font-size for consistency */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+  #aboutSection .cards,
+  .education .eduCards,
+  #programSection .boxContainr {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner h1 {
+    font-size: 2.5rem; /* Reduced for mobile readability */
+    line-height: 3rem;
+  }
+  .banner p {
+    font-size: 1rem; /* Adjusted for mobile */
+  }
+  .sectionTitle {
+    font-size: 1.5rem; /* Reduced for mobile */
+  }
+  .gallery .galleryGrid {
+    grid-template-columns: repeat(2, 1fr); /* Adjusted grid for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 2rem; /* Further reduced for smaller screens */
+    line-height: 2.5rem;
+  }
+  .banner p {
+    font-size: 0.875rem; /* Adjusted for smaller screens */
+  }
+  .sectionTitle {
+    font-size: 1.25rem; /* Further reduced */
+  }
+  .gallery .galleryGrid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+}
+/* Modal Form */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--themeRed);
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+/* Hidden input (not visible) */
+.modal-content input[type="hidden"] {
+  display: none;
+}
+
+.modal-content label {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: var(--themeRed);
+  box-shadow: 0 0 5px rgba(236,14,33,0.4);
+}
+
+.modal-content button {
+  background-color: var(--themeRed);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #b50a18;
+}
+
+/* Close button */
+.closeBtn {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 20% auto;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+}
